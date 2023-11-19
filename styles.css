@@ -1,0 +1,131 @@
+* {
+  padding: 0;
+  margin: 0;
+  color: hsl(0, 0%, 100%);
+}
+body {
+  background-color: hsl(217, 54%, 11%);
+  padding: 2rem 1rem;
+}
+.main-container {
+  background-color: hsl(216, 50%, 16%);
+  padding: 1.2rem 1.2rem;
+  box-shadow: 5px 5px 10px rgb(13, 25, 43);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  min-width: 200px;
+}
+.image-container {
+  position: relative;
+  z-index: 1;
+}
+.image-container:hover {
+  cursor: pointer;
+}
+
+.overlay {
+  display: none;
+}
+
+.overlay:hover {
+  backdrop-filter: blur(16px);
+  display: flex;
+  position: absolute;
+  z-index: 6;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: hsl(178, 100%, 50%);
+  border-radius: 0.5rem;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.title {
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+.title:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+.description {
+  color: hsl(215, 51%, 70%);
+  font-size: 1.2rem;
+}
+.currency {
+  display: flex;
+  justify-content: space-between;
+}
+.ethereum {
+  color: hsl(178, 100%, 50%);
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.clock {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: hsl(215, 51%, 70%);
+}
+
+.profile-container {
+  border-top: 1px solid hsl(215, 32%, 27%);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+.avatar img {
+  width: 100%;
+}
+.profile-container p {
+  color: hsl(215, 51%, 70%);
+}
+.name {
+  font-size: 1.1rem;
+  transition: color 0.25s ease opacity 0.25s ease-in-out font-size 0.25s ease;
+}
+.name:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.name:active {
+  opacity: 0.8;
+}
+@media (max-width: 499px) {
+  body {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: 500px) {
+  .main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 300px;
+  }
+}
